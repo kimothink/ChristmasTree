@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChristmasTree.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,22 @@ namespace ChristmasTree.Views
         public MainWindow()
         {
             InitializeComponent();
+            Loaded += new RoutedEventHandler(Image_Drag_Moving);
+
         }
+
+        /// <summary>
+        /// 이미지 드래그 이동
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void Image_Drag_Moving(object sender, RoutedEventArgs e)
+        {
+            Drag.SetWindow(this);
+            Drag.SetDrag(Tree, true);
+    
+        }
+
+
     }
 }

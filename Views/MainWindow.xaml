@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChristmasTree.Views"
         mc:Ignorable="d"
-        Title="MainWindow"  Height="450" Width="800" AllowsTransparency="True"
+        Title="MainWindow"    
+        Height="1080" 
+        Width="1920" 
+        AllowsTransparency="True"
         ResizeMode="NoResize"
         Background="Transparent"
         WindowStyle="None"
@@ -13,7 +16,7 @@
         Topmost="True">
     <Grid>
         <Canvas x:Name="canvas" Background="Transparent">
-            <Image Name="Tree" Source="../Resources/Tree.png" Height="400"/>
+            <Image Name="Tree" Source="../Resources/Tree.png" Height="980" Width="840"/>
         </Canvas>
     </Grid>
 </Window>
