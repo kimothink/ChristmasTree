@@ -9,8 +9,8 @@ namespace ChristmasTree.ViewModels
     {
         private static Point FirstPoint;
         private static int OldzIndex;
-        private static Window window;
-        private static FrameworkElement CurrentElement;
+        private static Window? window;
+        private static FrameworkElement? CurrentElement;
 
         private static readonly DependencyProperty DragProperty =
             DependencyProperty.RegisterAttached("Drag",
@@ -38,7 +38,7 @@ namespace ChristmasTree.ViewModels
 
         private static void ChangeDragProperty(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            FrameworkElement element = d as FrameworkElement;
+            FrameworkElement? element = d as FrameworkElement;
 
             if (element != null)
             {
@@ -65,7 +65,7 @@ namespace ChristmasTree.ViewModels
             {
                 Point CurrentPoint = e.GetPosition(CurrentElement);
 
-                TranslateTransform Translate = CurrentElement.RenderTransform as TranslateTransform;
+                TranslateTransform? Translate = CurrentElement!.RenderTransform as TranslateTransform;
 
                 if (Translate != null)
                 {
@@ -85,17 +85,17 @@ namespace ChristmasTree.ViewModels
 
             FirstPoint = e.GetPosition(CurrentElement);
 
-            window.PreviewMouseMove += window_PreviewMouseMove;
+            window!.PreviewMouseMove += window_PreviewMouseMove;
         }
 
         private static void element_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
-            FrameworkElement element = sender as FrameworkElement;
+            FrameworkElement? element = sender as FrameworkElement;
 
             Canvas.SetZIndex(element, OldzIndex);
 
             CurrentElement = window;
-            window.MouseMove -= window_PreviewMouseMove;
+            window!.MouseMove -= window_PreviewMouseMove;
         }
     }
 }

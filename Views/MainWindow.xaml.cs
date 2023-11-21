@@ -21,10 +21,26 @@ namespace ChristmasTree.Views
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly SnowEngine snow = null;
         public MainWindow()
         {
             InitializeComponent();
+            snow = new SnowEngine(canvas,
+               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow1.png",
+               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow2.png",
+               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow3.png",
+               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow4.png",
+               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow5.png",
+               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow6.png",
+               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow7.png",
+               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow8.png",
+               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow9.png"
+               );
+            //snow.Start();
+            snow.Start();
+
             Loaded += new RoutedEventHandler(Image_Drag_Moving);
+
 
         }
 
@@ -33,11 +49,10 @@ namespace ChristmasTree.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void Image_Drag_Moving(object sender, RoutedEventArgs e)
+        private void Image_Drag_Moving(object sender, RoutedEventArgs e)
         {
             Drag.SetWindow(this);
             Drag.SetDrag(Tree, true);
-    
         }
 
 
