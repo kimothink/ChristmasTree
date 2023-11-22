@@ -25,19 +25,19 @@ namespace ChristmasTree.Views
         public MainWindow()
         {
             InitializeComponent();
-            snow = new SnowEngine(canvas,
-               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow1.png",
-               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow2.png",
-               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow3.png",
-               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow4.png",
-               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow5.png",
-               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow6.png",
-               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow7.png",
-               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow8.png",
-               "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow9.png"
-               );
+            //snow = new SnowEngine(canvas,
+            //   "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow1.png",
+            //   "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow2.png",
+            //   "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow3.png",
+            //   "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow4.png",
+            //   "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow5.png",
+            //   "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow6.png",
+            //   "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow7.png",
+            //   "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow8.png",
+            //   "C:\\Users\\John\\Documents\\GitHub\\ChristmasTree\\Resources\\snow9.png"
+            //   );
+            ////snow.Start();
             //snow.Start();
-            snow.Start();
 
             Loaded += new RoutedEventHandler(Image_Drag_Moving);
 
